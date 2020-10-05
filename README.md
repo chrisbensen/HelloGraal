@@ -65,8 +65,6 @@ Run the native-image command: ::
 Reference
 =========
 
-- `java - How to run a JAR file - Stack Overflow <http://stackoverflow.com/questions/1238145/how-to-run-a-jar-file>`_.
-
 - `jar - Creating a JAR File https://docs.oracle.com/javase/tutorial/deployment/jar/build.html`_.
 
 - `Setting an Application's Entry Point (The Java™ Tutorials > Deployment > Packaging Programs in JAR Files) <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
