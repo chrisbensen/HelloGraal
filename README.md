@@ -59,7 +59,7 @@ Create a native image
 
 Run the native-image command: ::
 
-  native-image
+  native-image -jar Hello.jar
 
 
 Reference
@@ -70,3 +70,5 @@ Reference
 - `jar - Creating a JAR File https://docs.oracle.com/javase/tutorial/deployment/jar/build.html`_.
 
 - `Setting an Application's Entry Point (The Java™ Tutorials > Deployment > Packaging Programs in JAR Files) <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
+
+- `GraalVM - How to create a native-image <https://www.graalvm.org/reference-manual/native-image/>`_.
