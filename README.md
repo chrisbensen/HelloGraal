@@ -1,5 +1,4 @@
-Hello Graal
-=======================
+## Hello Graal
 
 This is "Hello Graal" java example for GraalVM.
 
@@ -9,64 +8,99 @@ The structure ``Hello`` package is like this: ::
   |-- hello
   |   `-- Graal.java
   |-- LICENSE
+  |-- .gitignore
   |-- manifest.txt
   `-- README.md
 
-Compile class
--------------
+## Install GraalVM
 
-For compile the main class for package, execute the follow command: ::
+Enterprise Edition
 
-  javac -d build src/com/hello/Graal.java
+   Download [GraalVM Enterprise](https://www.oracle.com/downloads/graalvm-downloads.html)
 
-This generate the ``Graal.class`` file into ``hello`` directory.
+   Unzip the download. For example on Linux run the following:
 
-Run class
----------
+   ```
+   tar -zxvf graalvm-ee-java11-linux-amd64-20.2.0.tar.gz && rm graalvm-ee-java11-linux-amd64-20.2.0.tar.gz
+   ```
 
-For run the main class for package, execute the follow command: ::
+   Put GraalVM on the path:
 
+   ```
+   export PATH=path/to/graal/bin:$PATH
+   java -version
+   ```
+
+Community Edition
+
+   ```
+   sudo yum -y install graalvm20-ee-11-20.2.0-1.el7.x86_64
+   sudo yum -y install graalvm20-ee-11-native-image
+   java -version
+   ```
+
+## Compile the code
+
+To compile the main class, run the follow command: ::
+
+   ```
+   javac -d build src/com/hello/Graal.java
+   ```
+
+This generates the ``Graal.class`` file into ``build/com/hello`` directory.
+
+## Run the class
+
+To run the main class, run the follow command: ::
+
+   ```
    java -cp ./build com.hello.Graal
+   ```
 
-This show the ``hello graal`` message.
+This shows the message ``hello graal``.
 
-Create a JAR file
------------------
+## Create a JAR file
 
-For pack the main class for package as a JAR file, execute the follow command: ::
+Create a JAR for the application, run the follow command: ::
 
-  jar cfvm Hello.jar manifest.txt -C build .
+   ```
+   jar cfvm Hello.jar manifest.txt -C build .
 
-  jar tf Hello.jar
+   jar tf Hello.jar
+   ```
 
-  META-INF/
-  META-INF/MANIFEST.MF
-  com/
-  com/hello/
-  com/hello/Graal.class
+The output will be:
 
-Run a JAR file
---------------
+   ```
+   META-INF/
+   META-INF/MANIFEST.MF
+   com/
+   com/hello/
+   com/hello/Graal.class
+   ```
 
-For run the JAR file packed, execute the follow command: ::
+## Run a JAR file
 
-  java -jar Hello.jar
+Run the JAR file: ::
 
-This show the ``Hello world`` message.
+   ```
+   java -jar Hello.jar
+   ```
 
-Create a native image
---------------
+This shows the ``hello graal`` message.
+
+## Create a native image
 
 Run the native-image command: ::
 
-  native-image -jar Hello.jar
+   ```
+   native-image -jar Hello.jar
+   ```
 
+# References
 
-Reference
-=========
+1. `Creating a JAR File https://docs.oracle.com/javase/tutorial/deployment/jar/build.html`_.
 
-- `jar - Creating a JAR File https://docs.oracle.com/javase/tutorial/deployment/jar/build.html`_.
+1. `Setting an Application's Entry Point <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
 
-- `Setting an Application's Entry Point (The Java™ Tutorials > Deployment > Packaging Programs in JAR Files) <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
-
-- `GraalVM - How to create a native-image <https://www.graalvm.org/reference-manual/native-image/>`_.
+1. `How to create a GraalVM native-image <https://www.graalvm.org/reference-manual/native-image/>`_.
