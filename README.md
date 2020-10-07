@@ -1,8 +1,8 @@
 ## Hello Graal
 
-This is "Hello Graal" java example for GraalVM.
+This is a "Hello Graal" Java example for GraalVM.
 
-The structure ``Hello`` package is like this: ::
+The structure of the ``Hello`` package is like this: ::
 
   com/
   |-- hello
@@ -33,10 +33,30 @@ Enterprise Edition
 
 Community Edition
 
+   On Oracle Linux or Red Hat:
    ```
    sudo yum -y install graalvm20-ee-11-20.2.0-1.el7.x86_64
    sudo yum -y install graalvm20-ee-11-native-image
    java -version
+   ```
+
+   On a Debian based Linux computer:
+
+   ```
+   export GRAAL_ZIP=graalvm-ce-java11-linux-amd64-20.2.0.tar.gz
+   wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.2.0/$GRAAL_ZIP
+   tar -zxvf $GRAAL_ZIP
+   rm $GRAAL_ZIP
+   export PATH=/root/graalvm-ce-java11-20.2.0/bin:$PATH
+   java -version
+   gu install native-image
+   ```
+
+## Clone reposotory
+
+   ```
+   git clone https://github.com/chrisbensen/HelloGraal
+   cd HelloGraal
    ```
 
 ## Compile the code
