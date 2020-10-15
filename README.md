@@ -4,6 +4,7 @@ This is a "Hello Graal" Java example for GraalVM.
 
 The structure of the ``Hello`` package is like this: ::
 
+  ```
   com/
   |-- hello
   |   `-- Graal.java
@@ -11,6 +12,7 @@ The structure of the ``Hello`` package is like this: ::
   |-- .gitignore
   |-- manifest.txt
   `-- README.md
+  ```
 
 ## Install GraalVM
 
