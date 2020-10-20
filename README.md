@@ -5,9 +5,11 @@ This is a "Hello Graal" Java example for GraalVM.
 The structure of the ``Hello`` package is like this: ::
 
   ```
-  com/
-  |-- hello
-  |   `-- Graal.java
+  .
+  | src
+  |   `--com/
+  |      `-- hello
+  |          `-- Graal.java
   |-- LICENSE
   |-- .gitignore
   |-- manifest.txt
@@ -121,8 +123,8 @@ Run the native-image command: ::
 
 # References
 
-1. `Creating a JAR File https://docs.oracle.com/javase/tutorial/deployment/jar/build.html`_.
+1. `Creating a JAR File [https://docs.oracle.com/javase/tutorial/deployment/jar/build.html]`.
 
-1. `Setting an Application's Entry Point <http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html>`_.
+1. `Setting an Application's Entry Point [http://docs.oracle.com/javase/tutorial/deployment/jar/appman.html]`.
 
-1. `How to create a GraalVM native-image <https://www.graalvm.org/reference-manual/native-image/>`_.
+1. `How to create a GraalVM native-image [https://www.graalvm.org/reference-manual/native-image]`.
